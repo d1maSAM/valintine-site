@@ -826,10 +826,10 @@
 
         .slideshow-wrapper {
             position: relative;
-            width: 90%;
-            max-width: 600px;
-            height: 85vh;
-            max-height: 850px;
+            width: 95%;
+            max-width: 750px;
+            height: 90vh;
+            max-height: 950px;
         }
 
         .photo-display {
@@ -1001,9 +1001,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             opacity: 0;
             pointer-events: none;
+            overflow-y: auto;
         }
 
         .final-message.active {
@@ -1025,10 +1026,10 @@
 
         .final-text {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 6vw, 4rem);
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
             color: white;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-weight: 700;
             text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
             animation: heartbeat 1.5s ease-in-out infinite;
@@ -1044,22 +1045,22 @@
         }
 
         .final-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
             color: white;
             text-align: center;
             max-width: 600px;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
         }
 
         .restart-btn, .video-btn, .counter-btn {
-            margin-top: 1rem;
-            padding: 1rem 2.5rem;
+            margin-top: 0.5rem;
+            padding: 0.8rem 2rem;
             background: white;
             color: var(--rose-pink);
             border: none;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
             font-weight: 600;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
@@ -1281,7 +1282,7 @@
             }
 
             .slideshow-wrapper {
-                height: 75vh;
+                height: 80vh;
             }
 
             .btn {
@@ -1398,7 +1399,7 @@
                         </div>
                         <div class="letter-signature">
                             С любовью,<br>
-                            Твой Дима 💕
+                            Твой 💕
                         </div>
                     </div>
                 </div>
@@ -1565,7 +1566,15 @@
                 </div>
             </div>
 
-           
+            <div class="counter-message">
+                <p class="counter-message-text">
+                    И каждая секунда с тобой — это маленькое чудо! ✨
+                </p>
+                <p class="counter-message-text">
+                    Не могу дождаться всех остальных моментов, которые мы проведём вместе 💕
+                </p>
+                <div class="counter-heart">💖</div>
+            </div>
 
             <button class="btn btn-yes continue-btn" onclick="showVideos()">Посмотреть видео →</button>
         </div>
@@ -1656,13 +1665,17 @@
         const relationshipStartDate = new Date(2024, 0, 14, 12, 0); // Пример: 14 января 2024, 12:00
 
         // Текст любовного письма
-        const letterText = `Мой пупсик,
+        const letterText = `Моя дорогая,
 
 Сегодня я хочу сказать тебе то, что давно живёт в моём сердце. Ты — самое прекрасное, что случилось со мной в жизни.
 
+С тобой я понял, что такое настоящее счастье. Это когда просыпаешься утром и понимаешь, что хочешь провести этот день именно с тобой. Это когда смотришь на звёзды и мечтаешь о нашем будущем.
+
+Ты делаешь меня лучше. Твоя улыбка согревает даже в самые холодные дни. Твой смех — моя любимая мелодия. Твои объятия — мой дом.
+
 Я обещаю всегда быть рядом, поддерживать тебя, заботиться о тебе и любить тебя каждый день всё сильнее и сильнее.
 
-Спасибо, что ты есть. Я люблю тебя всем сердцем! ❤️`;
+Спасибо, что ты есть. Спасибо, что выбрала меня. Я люблю тебя всем сердцем! ❤️`;
 
         // Создание плавающих сердечек, лепестков роз и звёздочек
         function createHearts() {
